@@ -99,6 +99,7 @@ div .section:nth-of-type(even) {
   width: 40%;
   aspect-ratio: 1 / 1;
   min-width: 200px;
+  max-width: 300px;
 }
 .services-picture {
   background-color: #EEEEEE;
@@ -127,7 +128,7 @@ div .section:nth-of-type(even) {
 }
 .skills {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   justify-content: space-between;
 }
@@ -262,10 +263,31 @@ footer {
   top: 0;
 right: 0;
 }
-nav .menu {
+nav .menu , #off-screen a{
   border: none;
   font-size: 20px;
   display: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.other_skill {
+  display: flex;
+  gap: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.testimonials_image {
+  width: 90px;
+}
+
+#Highlights ul li {
+  list-style-position: inside;
+  text-indent: -22px;
+  margin-left: 22px;
+  margin-bottom: 8px;
 }
 @media (max-width: 870px) {
   nav ul {

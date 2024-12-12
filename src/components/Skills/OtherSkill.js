@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function OtherSkill({name, icon}) {
   return (
-    <div>
-        <FontAwesomeIcon icon={icon} />
-        <span>{name}</span>
+    <div className='other_skill'>
+        <div><FontAwesomeIcon icon={icon} /></div>
+        <p>{name}</p>
     </div>
   )
 }
