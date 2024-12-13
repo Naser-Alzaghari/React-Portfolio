@@ -1,13 +1,31 @@
+:root {
+  --background-color: #f0f0f0;
+  --text-color: #1C1C1C;
+  --background-color-2: #FFFFFF;
+  --color-3: #616161;
+  --image-background-color: #f0f0f0;
+}
+
+[data-theme="dark"] {
+  --background-color: #222831;
+  --text-color: #EEEEEE;
+  --background-color-2: #393E46;
+  --color-3: #00ADB5;
+  --image-background-color: #EEEEEE;
+
+}
+
+
 * {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #EEEEEE;
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.5;
 }
 ::selection {
-  background: #00ADB5;
+  background: var(--color-3);
 }
 .margin-bottom{
   margin-bottom: 30px;
@@ -19,7 +37,7 @@ p ,h1 {
   margin-bottom: 10px;
 }
 body {
-  background-color: #222831;
+  background-color: var(--background-color);
 }
 .main-container {
   padding: 0px 10%;
@@ -28,7 +46,7 @@ header {
   position: sticky;
   padding-top: 10px;
   top: 0px;
-  background-color: #222831;
+  background-color: var(--background-color);
 }
 nav {
   display: flex;
@@ -46,14 +64,14 @@ a {
   transition: color .5s ease, background-color .5s ease;
 }
 a:hover{
-  color: #00ADB5;
+  color: var(--color-3);
 }
 .section {
   padding: 20px;
   margin: 10px 0;
 }
 div .section:nth-of-type(even) {
-  background-color: #393E46;
+  background-color: var(--background-color-2);
   border-radius: 5px;
 }
 .grid-container {
@@ -76,23 +94,23 @@ div .section:nth-of-type(even) {
 }
 .btn {
   border-radius: 5px;
-  background-color: #00ADB5;
+  background-color: var(--color-3);
   border: none;
   padding: 5px 15px;
   text-align: center;
-  color: #222831;
+  color: var(--background-color);
   font-weight: bold;
 }
 .btn *{
   color: inherit;
 }
 .btn:hover{
-  background-color: #222831;
-  color: #00ADB5;
+  background-color: var(--background-color);
+  color: var(--color-3);
 }
 .picture {
-  background-color: #EEEEEE;
-  border: 7px solid #00ADB5;
+  background-color: var(--image-background-color);
+  border: 7px solid var(--color-3);
   border-radius: 50%;
   object-fit: scale-down;
   text-align: center;
@@ -100,10 +118,11 @@ div .section:nth-of-type(even) {
   aspect-ratio: 1 / 1;
   min-width: 200px;
   max-width: 300px;
+  padding: 0.3rem;
 }
 .services-picture {
-  background-color: #EEEEEE;
-  border: 7px solid #00ADB5;
+  background-color: var(--image-background-color);
+  border: 7px solid var(--color-3);
   border-radius: 50%;
   object-fit: cover;
   min-width: 150px;
@@ -137,7 +156,7 @@ div .section:nth-of-type(even) {
   flex-direction: column;
   padding: 10px;
   gap: 20px;
-  background-color: #393E46;
+  background-color: var(--background-color-2);
   border-radius: 5px;
   text-align: center;
 }
@@ -174,11 +193,11 @@ div .section:nth-of-type(even) {
   align-items: center;
   padding: 10px;
   border-radius: 5px;
-  background-color: #222831;
+  background-color: var(--background-color);
 }
 .cards-contaner div div .btn {
   text-align: center;
-  border: 3px solid #00ADB5;
+  border: 3px solid var(--color-3);
 }
 .cards-contaner div div.logo {
   text-align: center;
@@ -195,26 +214,26 @@ div .section:nth-of-type(even) {
 
 .cards-contaner .coming_soon * {
   margin: 5px;
-  text-shadow: 1px 1px 5px #00ADB5;
+  text-shadow: 1px 1px 5px var(--color-3);
   font-weight: bold;
-  color: #EEEEEE;
+  color: var(--text-color);
   animation: changecolor 3s infinite;
 }
 @keyframes changecolor {
   0%{
-      text-shadow: 1px 1px 70px #00ADB5;
+      text-shadow: 1px 1px 70px var(--color-3);
   }
   50% {
-      text-shadow: 1px 1px 5px #00ADB5;
+      text-shadow: 1px 1px 5px var(--color-3);
   }
   100%{
-      text-shadow: 1px 1px 70px #00ADB5;
+      text-shadow: 1px 1px 70px var(--color-3);
   }
 }
 
 .container {
-  border: 2px solid #EEEEEE;
-  background-color: #393E46;
+  border: 2px solid var(--text-color);
+  background-color: var(--background-color-2);
   border-radius: 5px;
   padding: 16px;
   margin: 0px 0
@@ -246,18 +265,18 @@ footer {
   display: flex;
   flex-direction: column;
   position: fixed;
-  justify-content: start;
-  align-items: center;
-  gap: 20px;
-  padding: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
   top: 0;
-  right: -220px;
-  background-color: #222831;
-  box-shadow: -10px 3px 10px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  width: 200px;
+  right: -250px;
+  background-color: var(--background-color);
+  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
+  width: 250px;
   height: 100vh;
-  transition: right ease 1s;
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 .off-screen.active {
   top: 0;

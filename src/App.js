@@ -12,13 +12,17 @@ import React, { useState } from "react";
 
 
 function App() {
+
+
+  
+
+
   const [isActive, setIsActive] = useState(false);
 
     
   return (
     <div class="main-container" id="home">
         <main>
-        
           <Nav isActive={isActive} setIsActive={setIsActive}/>
           <SideBar isActive={isActive} setIsActive={setIsActive}/>
           <Hero/>

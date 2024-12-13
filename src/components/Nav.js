@@ -1,17 +1,23 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import Themed_logo from './Themed_logo'
 
-import logo from '../assets/img/naser-high-resolution-logo (2).png'
+
+import ThemeToggle from './ThemeToggle';
 
 function Nav({isActive, setIsActive}){
+
+    
     
     const toggleSidebar = () => {
         setIsActive(!isActive);
       };
     return (<header>
         <nav>
-            <a href="#"><img src={logo} alt="logo" width="70"/></a>
+            
+        
+            <a href="#"><Themed_logo/></a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#About">About</a></li>
@@ -20,6 +26,7 @@ function Nav({isActive, setIsActive}){
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#Testimonials">Testimonials</a></li>
                 <li><a href="#Highlights">Highlights</a></li>
+                <li><ThemeToggle/></li>
             </ul>
             <button className="menu" onClick={toggleSidebar}><FontAwesomeIcon icon={faBars} /></button>
          </nav>

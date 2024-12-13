@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
+import ThemeToggle from './ThemeToggle'
 
 function SideBar({isActive, setIsActive}){
 
@@ -9,6 +10,7 @@ function SideBar({isActive, setIsActive}){
 
     return(<div className={`off-screen ${isActive ? "active" : ""}`}>
         <a onClick={toggleSidebar} style={{textAlign: 'left'}}><FontAwesomeIcon icon={faX} /></a>
+        <ThemeToggle/>
         <a href="#home" onClick={toggleSidebar}>Home</a>
         <a href="#About" onClick={toggleSidebar}>About</a>
         <a href="#Experiance" onClick={toggleSidebar}>Experiance</a>
