@@ -100,14 +100,23 @@ div .section:nth-of-type(even) {
   text-align: center;
   color: var(--background-color);
   font-weight: bold;
+  border: 3px solid var(--color-3);
 }
 .btn *{
   color: inherit;
 }
-.btn:hover{
-  background-color: var(--background-color);
+.btn:hover , .fill{
+  background-color: inherit;
   color: var(--color-3);
 }
+
+.no-hover-effect:hover {
+  background-color: var(--color-3);
+  color: var(--background-color);
+}
+
+
+
 .picture {
   background-color: var(--image-background-color);
   border: 7px solid var(--color-3);
@@ -282,12 +291,17 @@ footer {
   top: 0;
 right: 0;
 }
-nav .menu , #off-screen a{
+nav .menu{
   border: none;
   font-size: 20px;
   display: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.close {
+  cursor: pointer;
+
 }
 .other_skill {
   display: flex;

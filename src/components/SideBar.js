@@ -9,8 +9,7 @@ function SideBar({isActive, setIsActive}){
       };
 
     return(<div className={`off-screen ${isActive ? "active" : ""}`}>
-        <a onClick={toggleSidebar} style={{textAlign: 'left'}}><FontAwesomeIcon icon={faX} /></a>
-        <ThemeToggle/>
+        <a className='close' onClick={toggleSidebar} style={{textAlign: 'left'}}><FontAwesomeIcon icon={faX} /></a>
         <a href="#home" onClick={toggleSidebar}>Home</a>
         <a href="#About" onClick={toggleSidebar}>About</a>
         <a href="#Experiance" onClick={toggleSidebar}>Experiance</a>
@@ -18,6 +17,7 @@ function SideBar({isActive, setIsActive}){
         <a href="#projects" onClick={toggleSidebar}>Projects</a>
         <a href="#Testimonials" onClick={toggleSidebar}>Testimonials</a>
         <a href="#Highlights" onClick={toggleSidebar}>Highlights</a>
+        <ThemeToggle/>
     </div>);
 }
 

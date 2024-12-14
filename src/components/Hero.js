@@ -12,8 +12,8 @@ export const Hero = () => {
                             <h1>Naser Al-zaghari</h1>
                             <p className="second-title">I am a Web Developer.</p>
                             <div className="margin-top hero-buttons">
-                                <a className="btn" href="mailto:naseralzaghari88@gmail.com" target="_blank"><i className="fa-solid fa-envelope"></i><span> Contact me</span></a>
-                                <a className="btn" href={CV} target="_blank"><i className="fa-solid fa-file"></i> <span>Resume</span></a>
+                                <a className="btn no-hover-effect" href="mailto:naseralzaghari88@gmail.com" target="_blank"><i className="fa-solid fa-envelope"></i><span> Contact me</span></a>
+                                <a className="btn fill" href={CV} target="_blank"><i className="fa-solid fa-file"></i> <span>Resume</span></a>
                             </div>
                         </div>
                             <img src={MyPhoto} className="picture" alt="pic"/>
